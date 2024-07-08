@@ -1,0 +1,26 @@
+
+export default function ComboBox() {
+  return (
+    <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={top100Films}
+      sx={{ width: 300 }}
+      ListboxProps={{
+        className: "myCustomList"
+      }}
+      renderInput={(params) => <TextField {...params} label="Movie" />}
+    />
+  );
+}
+
+.myCustomList::-webkit-scrollbar {
+  width: 12px;
+  background-color: #5f6f9c;
+}
+
+.myCustomList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d62929;
+}
